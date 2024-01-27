@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Web Proxy for School
+  </title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+<meta content="noindex, nofollow" name="robots"/></head>
+<body>
+<!-- Header Section -->
+<header class="bg-dark text-white text-center p-4">
+   Web Proxy for School
+  </header>
+<!-- Proxy Form -->
+<section class="container mt-5" id="proxy">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<h2>
+      Enter URL to Access
+     </h2>
+<form id="proxyForm">
+<div class="form-group">
+<input class="form-control" id="url" placeholder="Enter URL" required="" type="text"/>
+</div>
+<button class="btn btn-primary w-100" type="submit">
+       Access Website
+      </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Bootstrap & jQuery JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+</body>
+</html>
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    font-weight: bold;
+}
+
+#proxy {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+<script>
+    (function() {
+        window.onload = function() {
+            parent.iframeLoaded();
+        }
+    })();
+    try {
+    $(document).ready(function() {
+    $('#proxyForm').submit(function(e) {
+        e.preventDefault();
+        let url = $('#url').val();
+        if (url) {
+            window.open('https://www.proxywebsite.com/' + url, '_blank');
+        } else {
+            alert('Please enter a valid URL.');
+        }
+    });
+});
+    } catch (e) {
+        console.log("Error in JS code", e);
+    }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</html>
+    
